@@ -2085,6 +2085,11 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4:
   dependencies:
     ms "2.1.2"
 
+decorate-all@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/decorate-all/-/decorate-all-1.2.1.tgz#3749c49359a50a63d6a4ec891ec102613e45d3b5"
+  integrity sha512-4lq/hEXS7n+G3J1dRqS10GFd5/xhvPo17a9Dmq+UPWBiHGAv/NcSthI3jZlkxnZCPLc8F+oRzF6h2Cc2ahc5jA==
+
 dedent@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
