@@ -19,7 +19,7 @@ import { dataSourceOptions } from 'db/data-source';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot(dataSourceOptions),
     UsersModule,
     TypeOrmModule.forFeature([User, UserToken]),
