@@ -12,6 +12,9 @@ import { UserStrategy } from './auth/jwt.strategy';
 import { UsersService } from './users/users.service';
 import { TokenService } from './token/token.service';
 import { CategoriesModule } from './categories/categories.module';
+import { PostsModule } from './posts/posts.module';
+import { Post } from './posts/entities/post.entity';
+import { Category } from './categories/entities/category.entity';
 
 @Module({
   imports: [
@@ -23,13 +26,14 @@ import { CategoriesModule } from './categories/categories.module';
       username: 'root',
       password: '',
       database: 'ourpass_assessment',
-      entities: [User, UserToken],
+      entities: [User, UserToken, Post, Category],
       synchronize: true,
     }),
     UsersModule,
     TypeOrmModule.forFeature([User, UserToken]),
     TokenModule,
     CategoriesModule,
+    PostsModule,
   ],
   controllers: [AppController],
   providers: [
