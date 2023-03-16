@@ -15,20 +15,12 @@ import { CategoriesModule } from './categories/categories.module';
 import { PostsModule } from './posts/posts.module';
 import { Post } from './posts/entities/post.entity';
 import { Category } from './categories/entities/category.entity';
+import { dataSourceOptions } from 'db/data-source';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '',
-      database: 'ourpass_assessment',
-      entities: [User, UserToken, Post, Category],
-      synchronize: true,
-    }),
+    TypeOrmModule.forRoot(dataSourceOptions),
     UsersModule,
     TypeOrmModule.forFeature([User, UserToken]),
     TokenModule,
